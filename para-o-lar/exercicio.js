@@ -1,4 +1,4 @@
-let rna1 = []
+let rna = []
 
 class ConverterDna{
     constructor(filamentoDna){
@@ -9,32 +9,32 @@ class ConverterDna{
         let fitaDna = dna.split("") 
         
         for (let molecula of fitaDna ){
-            if (molecula == "C"){
-
-                molecula = "G"
-                rna1.push(molecula)
-
-            } else if (molecula == "G") {
+            if (molecula == "G"){
 
                 molecula = "C"
-                rna1.push(molecula)
+                rna.push(molecula)
+
+            } else if (molecula == "C") {
+
+                molecula = "G"
+                rna.push(molecula)
 
             } else if (molecula == "T"){
 
                 molecula = "A"
-                rna1.push(molecula)
+                rna.push(molecula)
 
             } else if (molecula == "A"){
 
                 molecula = "U"
-                rna1.push(molecula)
+                rna.push(molecula)
 
             } else {
                 console.log(`Essa molécula não existe, acrescente uma nova sequência`)
             }
         }
         
-        let rnaM = rna1.join("")
+        let rnaM = rna.join("")
         return rnaM
         
     }
